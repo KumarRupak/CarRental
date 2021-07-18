@@ -1,0 +1,70 @@
+body{
+	background:url(dcar.jpg);
+	width:110%;
+	background-size:cover;
+	position:center;
+	font-family:Arial;
+	color:white;
+}
+.loginbox{
+	width:500px;
+	height:680px;
+	background:grey;
+	color:#fff;
+	opacity:.7;
+	top:50%;
+	position:absolute;
+	transform:translate(30%,-50%);
+	box-sizing:border-box;
+	padding:60px 30px;
+	background-position:center;
+}
+.loginbox input[type="text"]
+{
+	height:10px;
+	padding:15px;
+}
+.loginbox input[type="email"]
+{
+	height:10px;
+	padding:15px;
+	width:320px;
+}
+.loginbox input[type="reset"]
+{
+	border:none;
+	outline:none;
+	height:40px;
+	background:red;
+	color:white;
+	front-size:18px;
+	border-radius:20px;
+	width:350px;
+}
+.loginbox input[type="submit"]
+{
+	border:none;
+	outline:none;
+	height:40px;
+	background:red;
+	color:white;
+	front-size:18px;
+	border-radius:20px;
+	width:350px;
+}
+.loginbox input[type="reset"]:hover{
+	cursor:pointer;
+	background-color:#ffc107;
+	color:#000;
+}
+.loginbox input[type="submit"]:hover{
+	cursor:pointer;
+	background-color:#ffc107;
+	color:#000;
+}
+
+
+iframe{
+	border:none;
+	outline:none;
+}

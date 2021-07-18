@@ -1,0 +1,87 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	margin:0;
+	padding:0;
+	background:gray;
+	background-image:url("home1.jpg");
+}
+nav{
+	width:100%;
+	background:red;
+	overflow:auto;
+}
+nav ul{
+	padding:0;
+	margin:0 0 0 150px;
+	list-style:none;
+}
+nav li{
+	float:right;
+}
+.logo img{
+	position:absolute;
+	margin-top:15px;
+	margin-left:10px
+}
+nav a
+{
+	width:10px;
+	dispaly:block;
+	padding:20px 15px;
+	text-decoration:none;
+	font-family:Arial;
+	color:#f2f2f2;
+	tect-align:center;
+	margin:10px;
+}
+nav a:hover{
+	background:purple;
+	transition:0,5s;
+	text-transform:uppercase;
+}
+.cs input{
+background-image:url("profile.png");
+background-color:red;
+width:200px;
+height:70px;
+font-size:18px;
+margin:8px;
+background-repeat:no-repeat;
+}
+.cs input:hover{
+width:250px;
+height:70px;
+transitions:1s;
+background-repeat:no-repeat;
+}
+.cs1 input{
+background-image:url("car.png");
+background-color:red;
+width:200px;
+height:70px;
+font-size:18px;
+margin:8px;
+background-repeat:no-repeat;
+}
+.cs1 input:hover{
+width:250px;
+height:70px;
+transitions:1s;
+background-repeat:no-repeat;
+}
+.cs2 input{
+background-image:url("carbook.png");
+background-color:red;
+width:200px;
+height:70px;
+font-size:18px;
+margin:8px;
+background-repeat:no-repeat;
+}
+.cs2 input:hover{
+width:250px;
+height:70px;
+transitions:1s;
+background-repeat:no-repeat;
+}
