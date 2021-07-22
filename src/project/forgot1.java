@@ -45,13 +45,17 @@ public class forgot1 extends HttpServlet {
 }
 		else
 		{
+			
 			uname=req.getParameter("uname");
 			String password=null;
 			String answer=null;
-			Connection con;
 			answer=req.getParameter("answer");
 			password=req.getParameter("password");
+			Connection con;
+			if(!password.equals("") && !answer.equals(""))
+			{
 			try {
+				
 				con = connectDB.Connect();
 				Statement st=con.createStatement();
 				ResultSet rs=st.executeQuery("select *from user_registation where email='"+uname+"'");
@@ -59,9 +63,10 @@ public class forgot1 extends HttpServlet {
 				{
 				answer1=rs.getString("answer");
 				}
+				
 			} catch (SQLException e1) {
 				// TODO Auto-generated catch block
-				e1.printStackTrace();
+				
 			}
 			
 			if(answer1.equals(answer))
@@ -71,7 +76,8 @@ public class forgot1 extends HttpServlet {
 					con = connectDB.Connect();
 					PreparedStatement st1=con.prepareStatement("update user_registation set password='"+password+"' where email='"+uname+"'");
 					st1.executeUpdate();
-					res.sendRedirect("NewUser.jsp");
+					res.getWriter().println("<script>alert('Password Updated Successfully Done');"
+							+ "window.location.href='NewUser.jsp';</script>");
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -89,6 +95,12 @@ public class forgot1 extends HttpServlet {
 			{
 				res.getWriter().println("<html><body bgcolor=red><hr><br><center><h2>... Wrong Answer...");
 				res.getWriter().print("</h2></center></body></html>");
+			}
+			}
+			else
+			{
+				res.getWriter().println("<script>alert('!Please Fill All Details');"
+						+ "window.location.href='forgot.jsp';</script>");
 			}
 			}
 		

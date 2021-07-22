@@ -33,7 +33,8 @@ public class update3 extends HttpServlet{
 		con = connectDB.Connect();
 		PreparedStatement st1=con.prepareStatement("update owner_reg set firstname='"+firstname+"',lastname='"+lastname+"',mobileno='"+phone+"',state='"+state+"',landmark='"+city+"',pin='"+pin+"',amount='"+amount+"',password='"+password+"'  where email='"+uname+"'");
 		st1.executeUpdate();
-		res.sendRedirect("driverlog.jsp");
+		res.getWriter().println("<script>alert('Updated Successfully Done');"
+				+ "window.location.href='driverlog.jsp';</script>");
 	} catch (SQLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();

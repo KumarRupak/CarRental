@@ -49,6 +49,8 @@ public class forgot2 extends HttpServlet {
 			Connection con;
 			answer=req.getParameter("answer");
 			password=req.getParameter("password");
+			if(!password.equals("") && !answer.equals(""))
+			{
 			try {
 				con = connectDB.Connect();
 				Statement st=con.createStatement();
@@ -68,7 +70,8 @@ public class forgot2 extends HttpServlet {
 					
 					con = connectDB.Connect();
 					PreparedStatement st1=con.prepareStatement("update user_registation set password='"+password+"' where email='"+uname+"'");
-					res.sendRedirect("driverlog.jsp");
+					res.getWriter().println("<script>alert('Password Updated Successfully Done');"
+							+ "window.location.href='driverlog.jsp';</script>");
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -87,11 +90,10 @@ public class forgot2 extends HttpServlet {
 				res.getWriter().println("<html><body bgcolor=red><hr><br><center><h2>... Wrong Answer...");
 				res.getWriter().print("</h2></center></body></html>");
 			}
-			}
-		
 			
+		}
 			
-		
+	}
 	}
 
 }

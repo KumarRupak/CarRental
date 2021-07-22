@@ -32,7 +32,8 @@ public class update1 extends HttpServlet{
 		con = connectDB.Connect();
 		PreparedStatement st1=con.prepareStatement("update user_registation set firstname='"+firstname+"',lastname='"+lastname+"',mobileno='"+phone+"',state='"+state+"',lanmark='"+city+"',pin='"+pin+"',password='"+password+"' where email='"+uname+"'");
 		st1.executeUpdate();
-		res.sendRedirect("NewUser.jsp");
+		res.getWriter().println("<script>alert('Updated Successfully Done');"
+				+ "window.location.href='NewUser.jsp';</script>");
 	} catch (SQLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();

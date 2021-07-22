@@ -50,6 +50,7 @@ public class forgot3 extends HttpServlet {
 			answer=req.getParameter("answer");
 			password=req.getParameter("password");
 			try {
+				
 				con = connectDB.Connect();
 				Statement st=con.createStatement();
 				ResultSet rs=st.executeQuery("select *from owner_reg where email='"+uname+"'");
@@ -68,7 +69,8 @@ public class forgot3 extends HttpServlet {
 					
 					con = connectDB.Connect();
 					PreparedStatement st1=con.prepareStatement("update user_registation set password='"+password+"' where email='"+uname+"'");
-					res.sendRedirect("ownerlogin.jsp");
+					res.getWriter().println("<script>alert('Password Updated Successfully Done');"
+							+ "window.location.href='ownerlogin.jsp';</script>");
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -89,9 +91,11 @@ public class forgot3 extends HttpServlet {
 			}
 			}
 		
+		
 			
 			
 		
+	
 	}
 
 

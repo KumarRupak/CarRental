@@ -17,7 +17,8 @@ public class cancelregistation extends HttpServlet {
 	public void service(HttpServletRequest req,HttpServletResponse res) throws IOException
 	{
 		String RI=null,ownerid=null,driverid=null,var=null;
-		String userid=(String)req.getSession().getAttribute("v");
+		String userid=(String)req.getSession().getAttribute("k");
+		String user=(String)req.getSession().getAttribute("user");
 		RI=req.getParameter("bookingid");
 		var=req.getParameter("cancel");
 	    Connection conn;
@@ -38,8 +39,18 @@ public class cancelregistation extends HttpServlet {
 		  st2.executeUpdate();
 		  PreparedStatement st3=conn.prepareStatement("update owner_reg set avaliable='"+"avaliable"+"' where email='"+ownerid+"'");
 		  st3.executeUpdate();
+		  if(user.equals("user"))
+		  {
 		  res.getWriter().println("<script>alert('Cancel Successfully Done');"+ "window.location.href='userhome.jsp?k="+userid+"';</script>");
-					
+		  }
+		  else if(user.equals("owner"))
+		  {
+			  res.getWriter().println("<script>alert('Cancel Successfully Done');"+ "window.location.href='ownerhome.jsp?k="+userid+"';</script>");  
+		  }
+		  else if(user.equals("driver"))
+		  {
+			  res.getWriter().println("<script>alert('Cancel Successfully Done');"+ "window.location.href='driverhome.jsp?k="+userid+"';</script>");  
+		  }
 			
 	} catch (SQLException e) {
 		// TODO Auto-generated catch block
