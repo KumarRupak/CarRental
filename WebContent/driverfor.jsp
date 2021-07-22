@@ -11,21 +11,22 @@
 <body bgcolor="778899">
 <div class="forgot">
 <img  src="projects//lock.jpg" class="av">
-<form action="forgot2">
-<input type="text" placeholder="Enter Your ID" name="uname">
+<form  action="forgot2">
+<input type="text" placeholder="Enter Your ID" name="uname"  required>
 <br><br>
 <%! String val=null; %>
 <% val=request.getParameter("k"); %>
 <label><% out.print(val); %></label>
 <br>
-<input type="text" placeholder="Enter Your Security Answer" name="answer">
+<input id="answer" type="text" placeholder="Enter Your Security Answer" name="answer">
 <br><br>
-<input type="paswword" placeholder="Enter Your New Password" name="password">
+<input id="passwd" type="password" placeholder="Enter Your New Password" name="password">
 <br><br>
 <input type="submit" name="forgot" value="question">
 <br><br>
 <input type="submit" name="forgot" value="update">
 </form>
 </div>
+
 </body>
 </html>

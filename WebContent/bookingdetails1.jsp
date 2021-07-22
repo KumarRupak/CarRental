@@ -37,6 +37,8 @@
                    <%!String uname=null;%>
                      <%
 			  uname=(String)session.getAttribute("u");
+              session.setAttribute("k", uname);
+              session.setAttribute("user","owner");
 			  Connection conn=connectDB.Connect();
 			  Statement st=conn.createStatement();
 			  ResultSet rs=st.executeQuery("select * from bookcab where carid='"+uname+"'");
@@ -82,9 +84,9 @@
 			  }
 			  %>
                    </table>
-                   <input type="text" placeholder="Enter Booking ID" name="bookingid">
+                  <!--  <input type="text" placeholder="Enter Booking ID" name="bookingid">
                    <input type="submit"  name="cancel" value="cancel Booking">
-                    <input type="submit"  name="cancel" value="Update Booking">
+                    <input type="submit"  name="cancel" value="Update Booking">--> 
                    </div>
                    </div>
                    </form>

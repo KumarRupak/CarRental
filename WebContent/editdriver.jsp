@@ -5,6 +5,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="projects//usreregistation.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
@@ -40,7 +44,8 @@ else if(var.equals("Delete Account"))
 	 st1.executeUpdate();
 	 PreparedStatement st2=conn.prepareStatement("delete from owner_reg where email='"+uname+"'");
 	 st2.executeUpdate();
-	 response.sendRedirect("index.jsp");
+	 response.getWriter().println("<script>alert('Account Hasbeen Deleted ! Thanks');"
+				+ "window.location.href='index.jsp';</script>");
 }
 %>
 <form action="update3" mathod="post">

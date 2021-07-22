@@ -45,7 +45,8 @@ else if(var.equals("Delete Account"))
 	 st1.executeUpdate();
 	 PreparedStatement st2=conn.prepareStatement("delete from owner_reg where email='"+uname+"'");
 	 st2.executeUpdate();
-	 response.sendRedirect("index.jsp");
+	 response.getWriter().println("<script>alert('Account Hasbeen Deleted ! Thanks');"
+				+ "window.location.href='index.jsp';</script>");
 }
 %>
 <form action="update2" mathod="post">

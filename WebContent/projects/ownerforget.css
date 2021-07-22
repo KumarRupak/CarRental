@@ -1,9 +1,8 @@
 .forgot{
 	width:500px;
 	height:420x;
-	background:blue;
-	opacity:.8;
-	color:cyan;
+	background:#20B2AA;
+	color:#fff;
 	top:50%;
 	position:absolute;
 	transform:translate(85%,-55%);
@@ -31,7 +30,7 @@
 .forgot input[type="submit"]:hover
 {
 	cursor:pointer;
-	background:cyan;
+	background:#ffc107;
 	color:#000;
 }
 .av

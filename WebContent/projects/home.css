@@ -4,7 +4,7 @@ body{
 	position:center;
 	width:80%;
 	font-family:Arial;
-	color:white;
+	color:#00ff00;
 }
 ul
 {
@@ -17,7 +17,7 @@ ul li{
 	float:left;
 	width:200px;
 	height:40px;
-	background-color:black;
+	background-color:#00ff00;
 	opacity:.9;
 	line-height:40px;
 	text-align:center;
@@ -26,7 +26,7 @@ ul li{
 }
 ul li a{
 	text-decoration:none;
-	color:white;
+	color:#00ff00;
 	display:block;
 }
 ul li a:hover{
@@ -39,9 +39,3 @@ ul li ul li{
 ul li:hover ul li {
 	display:block;
 }
-iframe
-{
-	border:none;
-	outline:none;"
-}
-

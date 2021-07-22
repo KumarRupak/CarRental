@@ -41,7 +41,6 @@ while(rs.next())
                         </div>
                     </div>
                    <div class="col-md-2">
-                        <input type="submit" class="profile-edit-btn" name="button" value="Edit profile"/>
                     </div>                    
                     <div class="col-md-8">
                         <div class="tab-content profile-tab" id="myTabContent">

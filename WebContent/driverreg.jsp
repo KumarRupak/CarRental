@@ -1,49 +1,111 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Driver Registation</title>
 <link rel="stylesheet" type="text/css" href="projects//driverreg.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
-<body bgcolor="#000">
-<div class="loginbox">
+<body>
+
 <form action="submit1">
-<input type="text" placeholder="Enter First Name" name="1stname">                    <input type="text" placeholder="Enter Last Name" name="lastname">
-<input type="text" style="width:325px" placeholder="Enter Your ID" name="email">
-<br><br>
-<input type="text" placeholder="Enter Mobile No" name="mobileno">                    <input type="text" placeholder="Enter Aadhr No" name="aadhrno">
-<br><br>
-<input type="text" placeholder="Enter State" name="state">                    <input type="text" placeholder="Enter PIN Code" name="pin">
-<input type="text" style="width:320px" placeholder="Enter Your City" name="landmark">
-<br><br>
-<input type="text" style="width:320px" placeholder="Enter Driving licence" name="dl">
-<br><br>
-<input style="height:10px;
-	padding:15px;" type="password" placeholder="Enter Password" name="password">                    <input style="height:10px;padding:15px;" type="password" placeholder="Confirm Password" name="confirmpassword">
-<select name="question" size="" size="60px" height="30px">
-<option selected="selected" value="">Choose a Security Question</option>
-<option>What Was Your 1st School Name</option>
-<option>What Was Your Bestiee Name</option>
+<div class="container" style="margin-top:5%;">
+ <div class="row">
+ 
+<div class="col-md-6">
+<label></label>
+<input class="form-control" type="text" placeholder="Enter First Name" name="1stname" required>
+</div>
+
+<div class="col-md-6">
+<label></label>
+<input class="form-control" type="text" placeholder="Enter Last Name" name="lastname" required>
+</div>
+
+<div class="col-md-6">
+<label></label>
+<input class="form-control" type="email" placeholder="Enter Your Email ID" name="email" required>
+</div>
+
+<div class="col-md-6">
+<label></label>
+<input class="form-control" type="number" placeholder="Enter Mobile No" name="mobileno" required>
+</div>
+
+<div class="col-md-6">
+<label></label>                    
+<input class="form-control" type="number" placeholder="Enter Aadhr No" name="aadhrno" required>
+</div>
+
+<div class="col-md-6">
+<label></label>
+<input class="form-control" type="text" placeholder="Enter State" name="state">    
+</div>
+
+<div class="col-md-6">
+<label></label>                
+<input class="form-control" type="number" placeholder="Enter PIN Code" name="pin">
+</div>
+
+<div class="col-md-6">
+<label></label>
+<input class="form-control" type="text" placeholder="Enter Your City" name="landmark" required>
+</div>
+
+<div class="col-md-6">
+<label></label>
+<input class="form-control" type="number" placeholder="Enter Driving licence" name="dl" required>
+</div>
+
+<div class="col-md-6">
+<label></label>
+<input class="form-control" type="number"  placeholder="Enter Your Amount Charges Per Km " name="amount" required>
+</div>
+
+<div class="col-md-6">
+<label></label>
+<input class="form-control" type="password" placeholder="Enter Password" name="password" required> 
+</div>
+
+<div class="col-md-6">
+<label></label>
+<input class="form-control" type="password" placeholder="Confirm Password" name="confirmpassword">
+</div>
+
+<div class="col-md-6">
+<label></label>
+<select style="margin-top: 10px;" name="question" class="btn btn-info dropdown-toggle" type="button">
+ <div class="dropdown-menu dropdown-menu-right">
+<option selected="selected" value="null">---------Choose Security Question---------</option>
+<option value="What Was Your 1st School Name">What Was Your 1st School Name</option>
+<option value="What Was Your Bestiee Name">What Was Your Bestiee Name</option>
+</div>
 </select>
-<input  name="answer" type="text" placeholder="Enter Your Security Answer" style="width:325px">
+</div>
+
+<div class="col-md-6">
+<label></label>
+<input class="form-control"  name="answer" type="password" placeholder="Enter Your Security Answer"  required>
+</div>
+
+
+
+</div>
+</div>
 <br><br>
-<input type="text" style="width:320px" placeholder="Enter Your Amount Charges Per Km " name="amount">
-<br><br>
+<div class="loginbox" align="center">
 <input type="submit">
 <br><br>
-<input type="reset" style="
-	border:none;
-	outline:none;
-	height:40px;
-	background:red;
-	color:white;
-	front-size:18px;
-	border-radius:20px;
-	width:350px;">
-	</form>
+<input type="reset">
 </div>
-<iframe src="frame4.html"  height="600px" width="400px" direction="right" align="right"></iframe>
+
+</form>
+</div>
 </body>
 </html>

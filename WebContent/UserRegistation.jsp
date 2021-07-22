@@ -1,41 +1,98 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>User Registation</title>
 <link rel="stylesheet" type="text/css" href="projects//usreregistation.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<div class="loginbox">
 <form action="submit" mathod="post">
 <br><br>
-<input type="text" placeholder="Enter First Name" name="1stname"/>                    <input type="text" placeholder="Enter Last Name"name="lastname">
-<br><br>
-<input type="text" style="width:325px" placeholder="Enter Your ID" name="ma">
-<br><br>
-<input type="text" placeholder="Enter Mobile No" name="mobileno">                    <input type="text" placeholder="Enter Aadhr No" name="aadhrno">
-<br><br>
-<input type="text" placeholder="Enter State" name="state">                    <input type="text" placeholder="Enter PIN Code" name="pin">
-<br><br>
-<input type="text" style="width:325px" placeholder="Enter Your City" name="landmark">
-<br><br>
-<input type="password" placeholder="Enter Password" name="password">                    <input type="password" placeholder="Confirm Password" name="confirmpassword">
-<br><br>
-<select name="question" size="" size="60px" height="200px">
-<option selected="selected" value="null">Choose a Security Question</option>
+<div class="container" style="margin-top:5%;">
+ <div class="row">
+ 
+<div class="col-md-4">
+<label></label>
+<input class="form-control" type="text" placeholder="Enter First Name" name="1stname" required> 
+</div>
+  
+<div class="col-md-4">
+<label></label>                
+<input  class="form-control"  type="text" placeholder="Enter Last Name"name="lastname" required>
+</div>
+
+<div class="col-md-4">
+<label></label>
+<input  class="form-control" type="email"  placeholder="Enter Your Email Id" name="ma" required>
+</div>
+
+<div class="col-md-4">
+<label></label>
+<input  class="form-control" type="number" placeholder="Enter Mobile No" name="mobileno" required>   
+</div>
+ 
+<div class="col-md-4">
+<label></label> 
+<input  class="form-control" type="number" placeholder="Enter Aadhr No" name="aadhrno" required>
+</div>
+
+<div class="col-md-4">
+<label></label> 
+<input  class="form-control" type="text" placeholder="Enter State" name="state" required>   
+</div>
+ 
+<div class="col-md-4"> 
+<label></label>
+<input class="form-control" type="number" placeholder="Enter PIN Code" name="pin" required>
+</div>
+
+<div class="col-md-4">
+<label></label>
+<input  class="form-control"  type="text" placeholder="Enter Your City" name="landmark" required>
+</div>
+
+<div class="col-md-4">
+<label></label>
+<input  class="form-control" type="password" placeholder="Enter Password" name="password" required>     
+</div>
+ 
+<div class="col-md-4">
+<label></label> 
+<input  class="form-control" type="password" placeholder="Confirm Password" name="confirmpassword" required>
+</div>
+
+<div class="col-md-4">
+<label></label>
+<select style="margin-top: 10px;" name="question" class="btn btn-info dropdown-toggle" type="button">
+ <div class="dropdown-menu dropdown-menu-right">
+<option selected="selected" value="null">---------Choose Security Question---------</option>
 <option value="What Was Your 1st School Name">What Was Your 1st School Name</option>
 <option value="What Was Your Bestiee Name">What Was Your Bestiee Name</option>
-</select>
-<br><br>
-<input name="answer" type="text" style="width:325px" placeholder="Enter Your Security Answer">
-<br><br>
-<input type="submit">
-<br><br>
-<input type="reset"></form>
 </div>
-<iframe src="frame1.html"  height="600px" width="400px"></iframe>
+</select>
+</div>
+
+<div class="col-md-4">
+<label></label>
+<input   class="form-control" name="answer" type="password"  placeholder="Enter Your Security Answer" required>
+</div>
+
+</div>
+</div>
+<br><br>
+<div class="loginbox" align="center">
+<input type="reset">
+<br><br>
+
+<input  type="submit">
+</form>
+</div>
 </body>
 </html>

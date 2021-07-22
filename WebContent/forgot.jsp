@@ -11,15 +11,15 @@
 <div class="forgot">
 <img  src="projects//forgot.png" class="av">
 <form action="forgot1">
-<input type="text" placeholder="Enter Your ID" name="uname">
+<input type="text" placeholder="Enter Your ID" name="uname" required>
 <br><br>
 <%! String val=null; %>
 <% val=request.getParameter("k"); %>
 <label><% out.print(val); %></label>
 <br>
-<input type="text" placeholder="Enter Your Security Answer" name="answer">
+<input type="text" placeholder="Enter Your Security Answer" name="answer" >
 <br><br>
-<input type="paswword" placeholder="Enter Your New Password" name="password">
+<input type="password" placeholder="Enter Your New Password" name="password">
 <br><br>
 <input type="submit" name="forgot" value="question">
 <br><br>

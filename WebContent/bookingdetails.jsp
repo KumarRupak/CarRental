@@ -37,6 +37,8 @@
                    <%!String uname=null;%>
                      <%
 			  uname=(String)session.getAttribute("u");
+              session.setAttribute("k", uname);
+              session.setAttribute("user","user");
 			  Connection conn=connectDB.Connect();
 			  Statement st=conn.createStatement();
 			  ResultSet rs=st.executeQuery("select * from bookcab where userid='"+uname+"'");

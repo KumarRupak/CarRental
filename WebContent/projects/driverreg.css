@@ -1,42 +1,18 @@
+*{
+	 font-family: Georgia, 'Times New Roman', Times, serif;
+}
 body{
-	background:url(dcar.jpg);
-	width:110%;
-	background-size:cover;
-	position:center;
-	font-family:Arial;
-	color:white;
-}
-.loginbox{
-	width:500px;
-	height:680px;
-	background:grey;
-	color:#fff;
-	opacity:.7;
-	top:50%;
-	position:absolute;
-	transform:translate(30%,-50%);
-	box-sizing:border-box;
-	padding:60px 30px;
-	background-position:center;
-}
-.loginbox input[type="text"]
-{
-	height:10px;
-	padding:15px;
-}
-.loginbox input[type="email"]
-{
-	height:10px;
-	padding:15px;
-	width:320px;
+	background: linear-gradient(110deg, #ECEE99 60%, #4ECEEE 60%);
+	 
+	
 }
 .loginbox input[type="reset"]
 {
 	border:none;
 	outline:none;
 	height:40px;
-	background:red;
-	color:white;
+	background:cyan;
+	color:#FF7F50;
 	front-size:18px;
 	border-radius:20px;
 	width:350px;
@@ -46,8 +22,8 @@ body{
 	border:none;
 	outline:none;
 	height:40px;
-	background:red;
-	color:white;
+	background:cyan;
+	color:#FF7F50;
 	front-size:18px;
 	border-radius:20px;
 	width:350px;
@@ -62,7 +38,6 @@ body{
 	background-color:#ffc107;
 	color:#000;
 }
-
 
 iframe{
 	border:none;

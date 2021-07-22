@@ -1,13 +1,14 @@
 body{
    margin:0;
    padding:0;
-   background: url(nature.jpg);
+   background: linear-gradient(110deg, #CDD4D8 60%, #4ECEEE 60%);
    background-size:cover;
- 	//background-position:center;
+   background-position:center;
    font-family:sans-serif;
+    
 }
 .loginbox{
-	width:500px;
+	width:350px;
 	height:420x;
 	background:#000;
 	color:#fff;
